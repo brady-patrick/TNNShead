@@ -74,7 +74,7 @@ const upcomingEvents = [
 ];
 
 export default function TennisLandingPage() {
-  const [activeTab, setActiveTab] = useState("rankings");
+  const [activeTab, setActiveTab] = useState("home");
 
   return (
     <div className="min-h-screen bg-primary">
@@ -94,31 +94,40 @@ export default function TennisLandingPage() {
               </div>
               <nav className="hidden md:flex items-center gap-6">
                 <button 
-                  onClick={() => setActiveTab("rankings")}
+                  onClick={() => setActiveTab("home")}
                   className={cx(
                     "text-sm font-medium transition-colors hover:text-brand-secondary",
-                    activeTab === "rankings" ? "text-brand-secondary" : "text-tertiary"
+                    activeTab === "home" ? "text-brand-secondary" : "text-tertiary"
                   )}
                 >
-                  Rankings
+                  Home
                 </button>
                 <button 
-                  onClick={() => setActiveTab("matches")}
+                  onClick={() => setActiveTab("players")}
                   className={cx(
                     "text-sm font-medium transition-colors hover:text-brand-secondary",
-                    activeTab === "matches" ? "text-brand-secondary" : "text-tertiary"
+                    activeTab === "players" ? "text-brand-secondary" : "text-tertiary"
                   )}
                 >
-                  Matches
+                  Players
                 </button>
                 <button 
-                  onClick={() => setActiveTab("scouting")}
+                  onClick={() => setActiveTab("coaching")}
                   className={cx(
                     "text-sm font-medium transition-colors hover:text-brand-secondary",
-                    activeTab === "scouting" ? "text-brand-secondary" : "text-tertiary"
+                    activeTab === "coaching" ? "text-brand-secondary" : "text-tertiary"
                   )}
                 >
-                  Scouting
+                  Coaching
+                </button>
+                <button 
+                  onClick={() => setActiveTab("events")}
+                  className={cx(
+                    "text-sm font-medium transition-colors hover:text-brand-secondary",
+                    activeTab === "events" ? "text-brand-secondary" : "text-tertiary"
+                  )}
+                >
+                  Events
                 </button>
               </nav>
             </div>
